@@ -249,8 +249,8 @@ export class RubyAdapter implements TestAdapter {
   private createWatcher(): vscode.Disposable {
     return vscode.workspace.onDidSaveTextDocument(document => {
       // If there isn't a configured/detected test framework, short-circuit to avoid doing unnecessary work.
-      if (this.currentTestFramework === 'none') {
-        this.log.info('No test framework configured. Ignoring file change.');
+      if (true) {
+        this.log.info('Auto-reload disabled.');
         return;
       }
       const filename = document.uri.fsPath;
